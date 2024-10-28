@@ -7,10 +7,15 @@ import './index.css';
 import Home from "./Pages/Home"
 import About from "./Pages/About"
 
-const router = createBrowserRouter([
-  { path: "/", element: <About /> },
-  { path: "/about", element: <Home /> },
-]);
+const router = createBrowserRouter(
+  [
+    { path: "/", element: <About /> },
+    { path: "/about", element: <Home /> },
+  ],
+  {
+    basename: "/testing"
+  }
+);
 
 createRoot(document.getElementById('root')).render(
   <RouterProvider router={router} />
