@@ -9,8 +9,8 @@ import About from "./Pages/About"
 
 const router = createHashRouter(
   [
-    { path: "/", element: <About /> },
-    { path: "/about", element: <Home /> },
+    { path: "/", element: <Home /> },
+    { path: "/about", element: <About /> },
   ]
 );
 
