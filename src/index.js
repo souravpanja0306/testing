@@ -11,10 +11,7 @@ const router = createHashRouter(
   [
     { path: "/", element: <About /> },
     { path: "/about", element: <Home /> },
-  ],
-  {
-    basename: "/testing"
-  }
+  ]
 );
 
 createRoot(document.getElementById('root')).render(
