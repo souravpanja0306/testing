@@ -1,23 +1,20 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import SwipeToDelete from '../Components/SwipeToDelete';
+import React, { useState, useContext, useEffect } from 'react'
+import Navbar from '../Components/Navbar'
+import AudioContext from '../Components/AudioProvider';
+import PlayButton from '../Components/PlayButton';
 
 const Home = () => {
-    const [items, setItems] = useState(['Item 1', 'Item 2', 'Item 3']);
+    const { togglePlay, isPlaying } = useContext(AudioContext);
+    const [isPopupOpen, setIsPopupOpen] = useState(false);
 
-    const handleDelete = (item) => {
-        setItems((prevItems) => prevItems.filter((i) => i !== item));
-    };
+
+    useEffect(() => {
+        if (!isPlaying) setIsPopupOpen(true);
+    }, []);
     return (
         <div>
-            <Link to="/">Home</Link>
-            <Link to="/about">About</Link>
-
-            <div className="space-y-2">
-                {items.map((item) => (
-                    <SwipeToDelete key={item} item={item} onDelete={handleDelete} />
-                ))}
-            </div>
+            <PlayButton isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
+            <Navbar />
         </div>
     )
 }

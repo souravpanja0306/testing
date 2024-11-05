@@ -7,29 +7,32 @@ const OptionBar = ({ isOpen, onClose }) => {
         e.preventDefault();
         if (mobile) {
             localStorage.setItem("token", mobile);
-            onClose()
+            onClose();
         };
     };
 
     return (
-        <div className={`fixed bottom-0 left-0 right-0 transform ${isOpen ? 'translate-y-0' : 'translate-y-full'} transition-transform duration-300 ease-in-out bg-gray-800 text-white p-4 rounded-t-2xl`}>
-            {/* <div className="flex justify-between items-center"> */}
-            <form onSubmit={(e) => handelSubmit(e)} className='flex justify-between gap-2'>
-                <input
-                    className='p-2 outline-none rounded-2xl text-slate-800 w-[80%]'
-                    placeholder='Please enter mobile'
-                    maxLength={10}
-                    onChange={(e) => setMobile(e.target.value)} />
-                <button
-                    className='text-white font-bold bg-slate-700 p-2 rounded-2xl'
-                    onClick={(e) => handelSubmit(e)}
-                >Submit</button>
-                <button
-                    className="text-red-500 font-bold"
-                    onClick={() => onClose()}
-                >Close</button>
-            </form>
-            {/* </div> */}
+        <div className={`fixed inset-0 bg-black bg-opacity-50 ${isOpen ? '' : 'hidden'} user-select-none`}>
+            <div
+                className={`fixed bottom-0 left-0 right-0 transform ${isOpen ? 'translate-y-0' : 'translate-y-full'} 
+                    transition-transform duration-300 ease-in-out text-white`}
+                onClick={(e) => e.stopPropagation()}>
+                <form
+                    onSubmit={(e) => handelSubmit(e)}
+                    className="flex flex-col justify-between gap-2 m-2 p-2 rounded-lg bg-white">
+                    <input
+                        className="p-2 outline-none text-slate-800 border-2 border-solid border-slate-200 rounded-lg"
+                        placeholder="Please enter mobile"
+                        maxLength={10}
+                        onChange={(e) => setMobile(e.target.value)}
+                        required
+                        type='tel' />
+                    <button type='submit' className="text-slate-700 font-bold p-2">Submit</button>
+                </form>
+                <form className="flex justify-center gap-2 m-2 p-2 rounded-lg bg-white" onClick={() => onClose()}>
+                    <button className="text-red-500 font-bold">Close</button>
+                </form>
+            </div>
         </div>
     )
 }
