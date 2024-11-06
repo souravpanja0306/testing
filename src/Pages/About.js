@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import OptionBar from '../Components/OptionBar'
 import Navbar from '../Components/Navbar';
-import PlayButton from '../Components/PlayButton';
 
 const About = () => {
     const [isPopupOpen, setIsPopupOpen] = useState(false);

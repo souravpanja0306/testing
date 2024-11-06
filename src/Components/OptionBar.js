@@ -12,7 +12,7 @@ const OptionBar = ({ isOpen, onClose }) => {
     };
 
     return (
-        <div className={`fixed inset-0 bg-black bg-opacity-50 ${isOpen ? '' : 'hidden'} user-select-none`}>
+        <div className={`fixed inset-0 bg-black bg-opacity-75 ${isOpen ? '' : 'hidden'} user-select-none`}>
             <div
                 className={`fixed bottom-0 left-0 right-0 transform ${isOpen ? 'translate-y-0' : 'translate-y-full'} 
                     transition-transform duration-300 ease-in-out text-white`}

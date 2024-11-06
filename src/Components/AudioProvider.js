@@ -22,6 +22,7 @@ export const AudioProvider = ({ children }) => {
         } else {
             audioRef.current.play();
             audioRef.current.loop = true;
+            audioRef.current.volume = 0.2
         };
     };
 

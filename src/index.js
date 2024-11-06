@@ -8,11 +8,12 @@ import { AudioProvider } from './Components/AudioProvider';
 
 // Pages...
 import Home from "./Pages/Home"
+import App from "./Pages/App"
 import About from "./Pages/About"
 
 const router = createHashRouter(
   [
-    { path: "/", element: <Home /> },
+    { path: "/", element: <App /> },
     { path: "/about", element: <About /> },
   ]
 );
