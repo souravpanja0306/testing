@@ -3,7 +3,7 @@ import React, { createContext, useRef, useEffect, useState } from 'react';
 const AudioContext = createContext();
 
 export const AudioProvider = ({ children }) => {
-    const audioRef = useRef(new Audio(`${process.env.PUBLIC_URL}/Diwali_Padwa.mp3`));
+    const audioRef = useRef(new Audio(`${process.env.PUBLIC_URL}/music.mp3`));
     const [isPlaying, setIsPlaying] = useState(false);
 
     useEffect(() => {
@@ -22,7 +22,7 @@ export const AudioProvider = ({ children }) => {
         } else {
             audioRef.current.play();
             audioRef.current.loop = true;
-            audioRef.current.volume = 0.2
+            audioRef.current.volume = 0.1
         };
     };
 
