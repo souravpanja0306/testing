@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
+import { IoCloseCircleOutline } from "react-icons/io5";
 
 const OptionBar = ({ isOpen, onClose }) => {
     const [mobile, setMobile] = useState("")
 
     const handelSubmit = (e) => {
         e.preventDefault();
+        if (navigator.vibrate) navigator.vibrate(75);
         if (mobile) {
             localStorage.setItem("token", mobile);
             onClose();
@@ -29,9 +31,12 @@ const OptionBar = ({ isOpen, onClose }) => {
                         type='tel' />
                     <button type='submit' className="text-slate-700 font-bold p-2">Submit</button>
                 </form>
-                <form className="flex justify-center gap-2 m-2 p-2 rounded-lg bg-white" onClick={() => onClose()}>
-                    <button className="text-red-500 font-bold">Close</button>
-                </form>
+                <div className="flex justify-center gap-2 m-2 p-2 rounded-lg bg-[#141d31]" onClick={() => onClose()}>
+                    <button className="text-red-500 font-bold font-playwrite flex justify-center items-center gap-1">
+                        <IoCloseCircleOutline className='text-2xl' />
+                        Close
+                    </button>
+                </div>
             </div>
         </div>
     )

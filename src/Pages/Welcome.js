@@ -16,13 +16,13 @@ const Welcome = () => {
     return (
         <Layout>
             <Link to="/address" className="absolute bottom-[50%] left-0" onClick={() => navigator.vibrate(75)}>
-                <div className="font-playwrite p-2 mb-1 text-white shadow-md shadow-slate-500 rounded-r-full animate-blink bg-slate-900 cursor-pointer select-none flex justify-center items-center">
+                <div className="font-playwrite p-2 mb-1 text-white shadow-md shadow-slate-500 rounded-r-full bg-slate-900 cursor-pointer select-none flex justify-center items-center gap-1 animate-blink">
                     <IoLocationOutline />
                     <p className="text-xs">Address</p>
                 </div>
             </Link>
             <Link to="/home" className="absolute bottom-[50%] right-0" onClick={() => navigator.vibrate(75)}>
-                <div className="font-playwrite p-2 mb-1 text-white shadow-md shadow-slate-500 rounded-l-full animate-blink bg-slate-900 cursor-pointer select-none flex justify-center items-center">
+                <div className="font-playwrite p-2 mb-1 text-white shadow-md shadow-slate-500 rounded-l-full bg-slate-900 cursor-pointer select-none flex justify-center items-center gap-1 animate-blink">
                     <p className="text-xs">Greetings</p>
                     <IoArrowForwardOutline />
                 </div>

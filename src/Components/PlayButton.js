@@ -34,12 +34,12 @@ const PlayButton = ({ isOpen, onClose }) => {
                         Play
                     </button>
                 </form>
-                <form className="flex justify-center gap-2 m-2 p-2 rounded-lg bg-[#141d31]" onClick={() => onClose()}>
+                <div className="flex justify-center gap-2 m-2 p-2 rounded-lg bg-[#141d31]" onClick={() => onClose()}>
                     <button className="text-red-500 font-bold font-playwrite flex justify-center items-center gap-1">
                         <IoCloseCircleOutline className='text-2xl' />
                         Close
                     </button>
-                </form>
+                </div>
             </div>
         </div>
     )

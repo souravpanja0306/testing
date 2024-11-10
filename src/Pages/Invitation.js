@@ -36,13 +36,13 @@ const Invitation = () => {
             <OptionBar isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
             <Layout>
                 <Link to="/venue" className="absolute bottom-[50%] left-0" onClick={() => navigator.vibrate(75)}>
-                    <div className="font-playwrite p-2 mb-1 text-white shadow-md shadow-slate-500 rounded-r-full bg-slate-900 cursor-pointer select-none flex justify-center items-center gap-1">
+                    <div className="font-playwrite p-2 mb-1 text-white shadow-md shadow-slate-500 rounded-r-full bg-slate-900 cursor-pointer select-none flex justify-center items-center gap-1 animate-blink">
                         <IoCalendarNumberOutline />
                         <p className="text-xs">Programs</p>
                     </div>
                 </Link>
                 <Link to="/rsvp" className="absolute bottom-[50%] right-0" onClick={() => navigator.vibrate(75)}>
-                    <div className="font-playwrite p-2 mb-1 text-white shadow-md shadow-slate-500 rounded-l-full bg-slate-900 cursor-pointer select-none flex justify-center items-center gap-1">
+                    <div className="font-playwrite p-2 mb-1 text-white shadow-md shadow-slate-500 rounded-l-full bg-slate-900 cursor-pointer select-none flex justify-center items-center gap-1 animate-blink">
                         <p className="text-xs">RSVP</p>
                         <IoCallOutline />
                     </div>

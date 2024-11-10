@@ -25,13 +25,13 @@ const Venue = () => {
                 <OptionBar isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} /> */}
             <Layout>
                 <Link to="/home" className="absolute bottom-[50%] left-0" onClick={() => navigator.vibrate(75)}>
-                    <div className="font-playwrite p-2 mb-1 text-white shadow-md shadow-slate-500 rounded-r-full bg-slate-900 cursor-pointer select-none flex justify-center items-center gap-1">
+                    <div className="font-playwrite p-2 mb-1 text-white shadow-md shadow-slate-500 rounded-r-full bg-slate-900 cursor-pointer select-none flex justify-center items-center gap-1 animate-blink">
                         <IoPeopleOutline />
                         <p className="text-xs">Invitation</p>
                     </div>
                 </Link>
                 <Link to="/address" className="absolute bottom-[50%] right-0" onClick={() => navigator.vibrate(75)}>
-                    <div className="font-playwrite p-2 mb-1 text-white shadow-md shadow-slate-500 rounded-l-full bg-slate-900 cursor-pointer select-none flex justify-center items-center gap-1">
+                    <div className="font-playwrite p-2 mb-1 text-white shadow-md shadow-slate-500 rounded-l-full bg-slate-900 cursor-pointer select-none flex justify-center items-center gap-1 animate-blink">
                         <p className="text-xs">Address</p>
                         <IoLocationOutline />
                     </div>
@@ -39,7 +39,7 @@ const Venue = () => {
 
                 <div className='min-h-screen justify-center items-center flex flex-col rounded-br-3xl rounded-tl-3xl'>
                     <img alt='Divider' src={`${process.env.PUBLIC_URL}/divider2.webp`} />
-                    <p className='text-yellow-500 font-dancing text-5xl font-medium'>~ RSVP ~</p>
+                    <p className='text-yellow-500 font-dancing text-5xl font-medium'>~ Rsvp ~</p>
                     <img alt='Divider' src={`${process.env.PUBLIC_URL}/divider2.webp`} />
                 </div>
             </Layout>

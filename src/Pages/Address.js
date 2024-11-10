@@ -31,13 +31,13 @@ const Address = () => {
         <>
             <Layout>
                 <Link to="/rsvp" className="absolute bottom-[50%] left-0" onClick={() => navigator.vibrate(75)}>
-                    <div className="font-playwrite p-2 mb-1 text-white shadow-md shadow-slate-500 rounded-r-full bg-slate-900 cursor-pointer select-none flex justify-center items-center gap-1">
+                    <div className="font-playwrite p-2 mb-1 text-white shadow-md shadow-slate-500 rounded-r-full bg-slate-900 cursor-pointer select-none flex justify-center items-center gap-1 animate-blink">
                         <IoCallOutline />
                         <p className="text-xs">Rsvp</p>
                     </div>
                 </Link>
                 <Link to="/" className="absolute bottom-[50%] right-0" onClick={() => navigator.vibrate(75)}>
-                    <div className="font-playwrite p-2 mb-1 text-white shadow-md shadow-slate-500 rounded-l-full bg-slate-900 cursor-pointer select-none flex justify-center items-center gap-1">
+                    <div className="font-playwrite p-2 mb-1 text-white shadow-md shadow-slate-500 rounded-l-full bg-slate-900 cursor-pointer select-none flex justify-center items-center gap-1 animate-blink">
                         <p className="text-xs">Home</p>
                         <IoHomeOutline />
                     </div>
