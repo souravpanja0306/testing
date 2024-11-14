@@ -15,7 +15,7 @@ module.exports = {
       keyframes: {
         blink: {
           '0%, 100%': { backgroundColor: '#141d31' },
-          '50%': { backgroundColor: '#032361' },
+          '50%': { backgroundColor: '#000000' },
         },
       },
     },
