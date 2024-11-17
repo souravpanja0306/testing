@@ -13,7 +13,6 @@ import Venue from "./Pages/Venue";
 import Address from "./Pages/Address"
 import Error from "./Pages/Error"
 import Invitation from './Pages/Invitation';
-import Rsvp from './Pages/Rsvp';
 import Groom from './Pages/Groom';
 import Bride from './Pages/Bride';
 
@@ -27,7 +26,6 @@ const router = createHashRouter(
     { path: "/venue", element: <Venue /> },
     { path: "/address", element: <Address /> },
     { path: "/invitation", element: <Invitation /> },
-    { path: "/rsvp", element: <Rsvp /> },
   ]
 );
 

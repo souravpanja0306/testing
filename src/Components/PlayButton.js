@@ -1,19 +1,9 @@
 import React, { useState, useContext } from 'react';
 import AudioContext from './AudioProvider';
-import {
-    IoArrowForwardOutline,
-    IoHomeOutline,
-    IoArrowBackOutline,
-    IoExitOutline,
-    IoLocationOutline,
-    IoCalendarNumberOutline,
-    IoPeopleOutline,
-    IoPlayOutline,
-    IoCloseCircleOutline
-} from "react-icons/io5";
+import { IoPlayOutline, IoCloseCircleOutline } from "react-icons/io5";
+
 const PlayButton = ({ isOpen, onClose }) => {
     const { togglePlay, isPlaying } = useContext(AudioContext);
-
     const handelSubmit = (e) => {
         e.preventDefault();
         if (navigator.vibrate) navigator.vibrate(75);
