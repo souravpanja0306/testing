@@ -28,13 +28,14 @@ const Address = () => {
                 <div className='w-full flex justify-center'>
                     <img alt='Address' src={`${process.env.PUBLIC_URL}/address.png`} className='w-[50%] text-center' />
                 </div>
-                <a href="https://maps.app.goo.gl/2PuUZbWtSZMap44h8" className="p-2 text-yellow-500 font-playwrite text-sm font-medium text-center underline">
+                <a href="https://maps.app.goo.gl/2PuUZbWtSZMap44h8" 
+                className="p-2 text-yellow-500 font-playwrite text-sm font-medium text-center underline animate-text-from-left">
                     Click to Go!
                 </a>
                 <Divider />
-                <p className='text-yellow-500 text-2xl font-playwrite'>RAILWAY INSTITUTE</p>
-                <p className='text-yellow-500 font-dancing text-2xl font-medium '>BNR, Garden Reach, S.E. Railway</p>
-                <p className='text-yellow-500 font-dancing text-2xl font-medium'>Kolkata - 700 043</p>
+                <p className='text-yellow-500 text-2xl font-playwrite animate-text-from-right'>RAILWAY INSTITUTE</p>
+                <p className='text-yellow-500 font-dancing text-2xl font-medium animate-text-from-left'>BNR, Garden Reach, S.E. Railway</p>
+                <p className='text-yellow-500 font-dancing text-2xl font-medium animate-text-from-right'>Kolkata - 700 043</p>
                 <Divider />
             </div>
         </Layout>

@@ -34,11 +34,11 @@ const Venue = () => {
                         <img alt='Address' src={`${process.env.PUBLIC_URL}/groom.png`} className='w-[40%] text-center' />
                     </div>
                     <Divider />
-                    <p className='text-yellow-500 font-dancing text-4xl font-medium'>~ Sourav Panja ~</p>
-                    <p className='text-yellow-500 font-playwrite text-xs font-medium'>Son of</p>
-                    <p className='text-yellow-500 font-dancing text-xl font-medium'>Mr. Bimal Panja</p>
-                    <p className='text-yellow-500 font-playwrite text-lg font-medium'>&</p>
-                    <p className='text-yellow-500 font-dancing text-xl font-medium'>Mrs. Jaya Panja</p>
+                    <p className='text-yellow-500 font-dancing text-4xl font-medium animate-text-from-left'>~ Sourav Panja ~</p>
+                    <p className='text-yellow-500 font-playwrite text-xs font-medium animate-text-from-right'>Son of</p>
+                    <p className='text-yellow-500 font-dancing text-xl font-medium animate-text-from-left'>Mr. Bimal Panja</p>
+                    <p className='text-yellow-500 font-playwrite text-lg font-medium animate-text-from-right'>&</p>
+                    <p className='text-yellow-500 font-dancing text-xl font-medium animate-text-from-left'>Mrs. Jaya Panja</p>
                     <Divider />
                     <div className='flex gap-4 justify-center w-full py-2'>
                         <Link to="/bride" className="animate-bounce border-solid border-yellow-500 border-2 p-2 rounded-lg font-playwrite text-xs hover:text-red-600 cursor-pointer text-yellow-500 font-bold">Bride</Link>

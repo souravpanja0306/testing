@@ -52,9 +52,9 @@ const Venue = () => {
                     <Divider />
                     <p className='text-yellow-500 font-dancing text-4xl font-medium'>~ Programs ~</p>
                     <Divider />
-                    <h className="flex text-yellow-500 justify-center text-xl items-center gap-2 font-dancing">Save the Dates</h>
+                    <h className="flex text-yellow-500 justify-center text-xl items-center gap-2 font-dancing animate-text-from-left">Save the Dates</h>
 
-                    <div className="text-yellow-500 p-4 max-w-md mx-auto">
+                    <div className="text-yellow-500 p-4 max-w-md mx-auto animate-text-from-right">
                         <h className="flex text-yellow-500 justify-center text-xl items-center gap-2 font-playwrite">Subh Bibah</h>
                         <div className="gap-2 font-dancing flex text-yellow-500 justify-center items-center text-center text-lg font-semibold">
                             <IoCalendarNumberOutline className='text-yellow-500' />
@@ -84,7 +84,7 @@ const Venue = () => {
 
                     <Divider />
 
-                    <div className="text-yellow-500 p-4 max-w-md mx-auto">
+                    <div className="text-yellow-500 p-4 max-w-md mx-auto animate-text-from-left">
                         <h className="flex text-yellow-500 justify-center text-xl items-center gap-2 font-playwrite">Reception</h>
 
                         <div className="gap-2 font-dancing flex text-yellow-500 justify-center items-center text-center text-lg font-semibold">

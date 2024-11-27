@@ -40,14 +40,14 @@ const Welcome = () => {
                 <img alt='Swastick' className='w-[10%] text-center' src={`${process.env.PUBLIC_URL}/swastick.png`} />
                 <Divider />
                 {/* <p className='text-yellow-500 font-dancing text-2xl font-medium'> Om Shri Ganeshaya Namaha</p> */}
-                <p className='text-yellow-500 font-dancing text-4xl font-medium'>~ Welcome ~</p>
+                <p className='text-yellow-500 font-dancing text-4xl font-medium animate-text-from-left'>~ Welcome ~</p>
                 <Divider />
                 <PlayButton isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
                 <div className='w-full flex justify-center'>
                     <img alt='Ganesh' src={`${process.env.PUBLIC_URL}/ganesh.webp`} className='w-[50%] text-center' />
                 </div>
                 <Divider />
-                <p className='text-yellow-500 font-dancing text-2xl font-medium'> Om Shri Ganeshaya Namaha</p>
+                <p className='text-yellow-500 font-dancing text-2xl font-medium animate-text-from-right'> Om Shri Ganeshaya Namaha</p>
                 <Divider />
             </div>
         </Layout>

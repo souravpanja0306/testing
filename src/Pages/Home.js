@@ -79,10 +79,10 @@ const Home = () => {
                     <Divider />
                     <p className="text-yellow-500 font-dancing text-4xl font-medium">~ Wedding Invitation ~</p>
                     <Divider />
-                    <p className="text-white font-playwrite text-md font-medium">Together with our families we joufully invite you to the wedding of</p>
-                    <p className="font-dancing text-4xl text-yellow-500 font-bold">Sourav Panja</p>
-                    <p className="font-dancing text-xl text-yellow-500">weds</p>
-                    <p className="font-dancing text-4xl text-yellow-500 font-bold">Rina Halder</p>
+                    <p className="text-white font-playwrite text-md font-medium animate-text-from-right">Together with our families we joufully invite you to the wedding of</p>
+                    <p className="font-dancing text-4xl text-yellow-500 font-bold animate-text-from-left">Sourav Panja</p>
+                    <p className="font-dancing text-xl text-yellow-500 animate-text-from-right">&</p>
+                    <p className="font-dancing text-4xl text-yellow-500 font-bold animate-text-from-left">Rina Halder</p>
                     {/* <p className="font-dancing text-xl text-yellow-500 font-bold">::VENUE::</p>
                     <p className="text-white font-playwrite text-sm font-medium">Sunday, 8th March, 2025</p>
                     <p className="text-white font-playwrite text-sm font-medium">Railway Institute, Garden Reach, Kolkata - 700043</p> */}
@@ -95,9 +95,9 @@ const Home = () => {
                     </div>
 
                     <div>
-                        <p className="text-yellow-500 font-playwrite text-sm font-bold">Sunday, 6th March, 2025</p>
-                        <p className="text-yellow-500 font-playwrite text-sm font-bold">We are waiting</p>
-                        <p className="text-yellow-500 font-playwrite text-sm font-bold">
+                        <p className="text-yellow-500 font-playwrite text-sm font-bold animate-text-from-right">Thursday, 6th March, 2025</p>
+                        <p className="text-yellow-500 font-playwrite text-sm font-bold animate-text-from-left">We are waiting</p>
+                        <p className="text-yellow-500 font-playwrite text-sm font-bold animate-text-from-right">
                             {timeLeft.days}Days, {timeLeft.hours}h:{timeLeft.minutes}m:{timeLeft.seconds}s left.
                         </p>
                     </div>
