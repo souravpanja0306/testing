@@ -17,7 +17,7 @@ module.exports = {
           '0%, 100%': { transform: 'translateY(0)', animationTimingFunction: 'ease-in-out' },
           '50%': { transform: 'translateY(-50px)', animationTimingFunction: 'ease-in' },
         },
-        blink: {
+        'blink': {
           '0%, 100%': { backgroundColor: '#141d31' },
           '50%': { backgroundColor: '#000000' },
         },
@@ -26,11 +26,11 @@ module.exports = {
           '50%': { transform: 'rotate(180deg)' },
           '100%': { transform: 'rotate(360deg)' },
         },
-        'text-from-left': { // Animation for text appearing from the left
+        'text-from-left': {
           '0%': { transform: 'translateX(-100%)', opacity: 0 },
           '100%': { transform: 'translateX(0)', opacity: 1 },
         },
-        'text-from-right': { // Animation for text appearing from the right
+        'text-from-right': {
           '0%': { transform: 'translateX(100%)', opacity: 0 },
           '100%': { transform: 'translateX(0)', opacity: 1 },
         },

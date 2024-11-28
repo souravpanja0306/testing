@@ -30,8 +30,8 @@ const Venue = () => {
                 </Link>
 
                 <div className='min-h-screen justify-center items-center flex flex-col rounded-br-3xl rounded-tl-3xl'>
-                    <div className='w-full flex justify-center'>
-                        <img alt='Address' src={`${process.env.PUBLIC_URL}/bride.png`} className='w-[40%] text-center' />
+                    <div className='w-full flex justify-center animate-text-from-right'>
+                        <img alt='Address' src={`${process.env.PUBLIC_URL}/bride.png`} className='w-[60%] text-center' />
                     </div>
                     <Divider />
                     <p className='text-yellow-500 font-dancing text-4xl font-medium animate-text-from-right'>~ Rina Halder ~</p>

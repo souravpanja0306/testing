@@ -44,7 +44,7 @@ const Welcome = () => {
                 <Divider />
                 <PlayButton isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
                 <div className='w-full flex justify-center'>
-                    <img alt='Ganesh' src={`${process.env.PUBLIC_URL}/ganesh.webp`} className='w-[50%] text-center' />
+                    <img alt='Ganesh' src={`${process.env.PUBLIC_URL}/ganesh.png`} className='w-[50%] text-center' />
                 </div>
                 <Divider />
                 <p className='text-yellow-500 font-dancing text-2xl font-medium animate-text-from-right'> Om Shri Ganeshaya Namaha</p>

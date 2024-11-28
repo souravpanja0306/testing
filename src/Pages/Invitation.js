@@ -37,17 +37,15 @@ const Invitation = () => {
                     <p className='text-yellow-500 font-dancing text-4xl font-medium animate-text-from-right'>{data?.name}</p>
                     <p className='text-yellow-500 font-playwrite text-lg font-medium animate-text-from-left'>{data?.address}</p>
                     <p className='text-yellow-500 font-dancing text-xl font-medium animate-text-from-right'>{data?.with}</p>
-                    {/* <Divider /> */}
                     <PiHandsPrayingLight className='text-yellow-500 text-7xl font-thin p-2' />
-                    <Divider />
-                    <p className='text-yellow-500 font-dancing text-4xl font-medium'>~ R.S.V.P. ~</p>
-                    <Divider />
                     <div className='flex flex-col py-2 text-center'>
                         <p className='text-yellow-500 font-dancing text-xl font-medium animate-text-from-left'>With best compliments from:</p>
                         <p className='text-yellow-500 font-playwrite text-xl font-medium animate-text-from-right'>Bimal Panja & Jaya Panja</p>
                     </div>
                     <div className='flex flex-col py-2 text-center'>
-                        <p className='text-yellow-500 font-dancing text-xl font-medium animate-text-from-left'>R.S.V.P.:</p>
+                        <Divider />
+                        <p className='text-yellow-500 font-dancing text-4xl font-medium'>~ R.S.V.P. ~</p>
+                        <Divider />
                         <p className='text-yellow-500 font-dancing text-3xl font-medium animate-text-from-right'>Subhradip Panja</p>
                         <p className='text-yellow-500 font-dancing text-3xl font-medium animate-text-from-left'>Sweety Panja</p>
                         <p className='text-yellow-500 font-dancing text-3xl font-medium animate-text-from-right'>Subham Panja & Dipika Panja</p>
