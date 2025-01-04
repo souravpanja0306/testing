@@ -15,7 +15,7 @@ import Divider from '../Components/Divider';
 const Home = () => {
     const { togglePlay, isPlaying } = useContext(AudioContext);
     const [isPopupOpen, setIsPopupOpen] = useState(false);
-
+    const [from, setFrom] = useState("sourav");
 
     useEffect(() => {
         if (!isPlaying) setIsPopupOpen(true);
@@ -37,6 +37,11 @@ const Home = () => {
             };
         };
     };
+
+    useEffect(() => {
+        let fromWhom = localStorage.getItem("from");
+        if (fromWhom) setFrom(fromWhom);
+    }, [])
 
     useEffect(() => {
         authentication();
@@ -62,13 +67,13 @@ const Home = () => {
         <>
             <PlayButton isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
             <Layout>
-                <Link to="/" className="fixed bottom-[350px] left-0" onClick={() => navigator.vibrate(75)}>
+                <Link to="/" className="fixed bottom-[300px] left-0" onClick={() => navigator.vibrate(75)}>
                     <div className="font-playwrite p-2 mb-1 text-white shadow-md shadow-slate-500 rounded-r-full bg-black cursor-pointer select-none flex justify-center items-center gap-1 animate-blink">
                         <IoHomeOutline />
                         <p className="text-xs">Home</p>
                     </div>
                 </Link>
-                <Link to="/venue" className="fixed bottom-[350px] right-0" onClick={() => navigator.vibrate(75)}>
+                <Link to="/venue" className="fixed bottom-[300px] right-0" onClick={() => navigator.vibrate(75)}>
                     <div className="font-playwrite p-2 mb-1 text-white shadow-md shadow-slate-500 rounded-l-full bg-black cursor-pointer select-none flex justify-center items-center gap-1 animate-blink">
                         <p className="text-xs">Programmes</p>
                         <IoCalendarNumberOutline />
@@ -80,12 +85,13 @@ const Home = () => {
                     <p className="text-yellow-500 font-dancing text-4xl font-medium">~ Wedding Invitation ~</p>
                     <Divider />
                     <p className="text-white font-playwrite text-md font-medium animate-text-from-right">Together with our families we joufully invite you to the wedding of</p>
-                    <p className="font-dancing text-4xl text-yellow-500 font-bold animate-text-from-left">Sourav Panja</p>
+                    <p className="font-dancing text-4xl text-yellow-500 font-bold animate-text-from-left">
+                        {from == "rina" ? "Rina Halder" : "Sourav Panja"}
+                    </p>
                     <p className="font-dancing text-xl text-yellow-500 animate-text-from-right">&</p>
-                    <p className="font-dancing text-4xl text-yellow-500 font-bold animate-text-from-left">Rina Halder</p>
-                    {/* <p className="font-dancing text-xl text-yellow-500 font-bold">::VENUE::</p>
-                    <p className="text-white font-playwrite text-sm font-medium">Sunday, 8th March, 2025</p>
-                    <p className="text-white font-playwrite text-sm font-medium">Railway Institute, Garden Reach, Kolkata - 700043</p> */}
+                    <p className="font-dancing text-4xl text-yellow-500 font-bold animate-text-from-left">
+                        {from == "rina" ? "Sourav Panja" : "Rina Halder"}
+                    </p>
                     <div className='w-full flex justify-center'>
                         <img alt='Couple' src={`${process.env.PUBLIC_URL}/couple.webp`} className='w-[60%] text-center' />
                     </div>

@@ -8,13 +8,13 @@ const Address = () => {
     return (
 
         <Layout>
-            <Link to="/invitation" className="fixed bottom-[350px] left-0" onClick={() => navigator.vibrate(75)}>
+            <Link to="/invitation" className="fixed bottom-[300px] left-0" onClick={() => navigator.vibrate(75)}>
                 <div className="font-playwrite p-2 mb-1 text-white shadow-md shadow-slate-500 rounded-r-full bg-black cursor-pointer select-none flex justify-center items-center gap-1 animate-blink">
                     <IoPeopleOutline />
                     <p className="text-xs">Invitation</p>
                 </div>
             </Link>
-            <Link to="/" className="fixed bottom-[350px] right-0" onClick={() => navigator.vibrate(75)}>
+            <Link to="/" className="fixed bottom-[300px] right-0" onClick={() => navigator.vibrate(75)}>
                 <div className="font-playwrite p-2 mb-1 text-white shadow-md shadow-slate-500 rounded-l-full bg-black cursor-pointer select-none flex justify-center items-center gap-1 animate-blink">
                     <p className="text-xs">Home</p>
                     <IoHomeOutline />

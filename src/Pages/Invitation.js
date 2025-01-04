@@ -21,13 +21,13 @@ const Invitation = () => {
     return (
         <>
             <Layout>
-                <Link to="/venue" className="fixed bottom-[350px] left-0" onClick={() => navigator.vibrate(75)}>
+                <Link to="/venue" className="fixed bottom-[300px] left-0" onClick={() => navigator.vibrate(75)}>
                     <div className="font-playwrite p-2 mb-1 text-white shadow-md shadow-slate-500 rounded-r-full bg-black cursor-pointer select-none flex justify-center items-center gap-1 animate-blink">
                         <IoCalendarNumberOutline />
                         <p className="text-xs">Programmes</p>
                     </div>
                 </Link>
-                <Link to="/address" className="fixed bottom-[350px] right-0" onClick={() => navigator.vibrate(75)}>
+                <Link to="/address" className="fixed bottom-[300px] right-0" onClick={() => navigator.vibrate(75)}>
                     <div className="font-playwrite p-2 mb-1 text-white shadow-md shadow-slate-500 rounded-l-full bg-black cursor-pointer select-none flex justify-center items-center gap-1 animate-blink">
                         <p className="text-xs">Venue</p>
                         <IoLocationOutline />
@@ -45,19 +45,41 @@ const Invitation = () => {
                     <div className='flex flex-col py-2 text-center'>
                         <p className='text-yellow-500 font-dancing text-xl font-medium animate-text-from-left'>With best compliments from:</p>
                         <p className='text-yellow-500 font-playwrite text-xl font-medium animate-text-from-right'>
-                            {
-                                from == "rina" ? "Sukumar Hader & Arati Halder" : "Bimal Panja & Jaya Panja"
-                            }
+                            {from == "rina" ? "Sukumar Hader & Arati Halder" : "Bimal Panja & Jaya Panja"}
                         </p>
                     </div>
                     <div className='flex flex-col py-2 text-center'>
                         <Divider />
                         <p className='text-yellow-500 font-dancing text-4xl font-medium'>~ R.S.V.P. ~</p>
                         <Divider />
-                        <p className='text-yellow-500 font-dancing text-3xl font-medium animate-text-from-right'>Subhradip Panja</p>
-                        <p className='text-yellow-500 font-dancing text-3xl font-medium animate-text-from-left'>Sweety Panja</p>
-                        <p className='text-yellow-500 font-dancing text-3xl font-medium animate-text-from-right'>Subham Panja & Dipika Panja</p>
-                        <p className='text-yellow-500 font-playwrite text-xl font-medium animate-text-from-left'>7278288786 / 9883250237</p>
+                        <p className='text-yellow-500 font-dancing text-3xl font-medium animate-text-from-right'>
+                            {from == "rina" ? "Manaranjan Halder" : "Subhradip Panja"}
+                        </p>
+                        <p className='text-yellow-500 font-dancing text-3xl font-medium animate-text-from-left'>
+                            {from == "rina" ? "Manaranjan Halder" : "Sweety Panja"}
+                        </p>
+                        <p className='text-yellow-500 font-dancing text-3xl font-medium animate-text-from-right'>
+                            {from == "rina" ? "Amit Halder & Sona Halder" : "Subham Panja & Dipika Panja"}
+                        </p>
+                        <p className='text-white font-dancing text-3xl font-medium animate-text-from-right'>
+                            Contact Us
+                        </p>
+                        <p className='text-yellow-500 font-playwrite text-xl font-medium animate-text-from-left'>
+                            {from == "rina"
+                                ? <>
+                                    <a href="tel:+917439071514">7439071514 (Sukumar Halder)</a>
+                                    <br />
+                                    <a href="tel:+918013951866">8013951866 (Manaranjan)</a>
+                                    <br />
+                                    <a href="tel:+919007773636">9007773636 (Amit)</a>
+                                </>
+                                : <>
+                                    <a href="tel:+917278288786">7278288786 (Bimal Panja)</a>
+                                    <br />
+                                    <a href="tel:+919883250237">9883250237 (Subham Panja)</a>
+                                </>
+                            }
+                        </p>
                     </div>
                 </div>
             </Layout>
