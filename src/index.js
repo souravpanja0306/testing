@@ -15,6 +15,7 @@ import Error from "./Pages/Error"
 import Invitation from './Pages/Invitation';
 import Groom from './Pages/Groom';
 import Bride from './Pages/Bride';
+import Share from './Pages/Share';
 
 const router = createBrowserRouter(
   [
@@ -26,6 +27,7 @@ const router = createBrowserRouter(
     { path: "/venue", element: <Venue /> },
     { path: "/address", element: <Address /> },
     { path: "/invitation", element: <Invitation /> },
+    { path: "/share-admin", element: <Share /> },
   ]
 );
 
