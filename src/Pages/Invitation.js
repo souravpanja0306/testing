@@ -9,13 +9,14 @@ import Divider from '../Components/Divider';
 const Invitation = () => {
     const navigate = useNavigate();
     const [data, setdata] = useState({});
-    const [from, setFrom] = useState("");
+    const [from, setFrom] = useState("sourav");
 
     useEffect(() => {
         let datas = localStorage.getItem("data");
-        let froms = localStorage.getItem("from");
         if (data) setdata(JSON.parse(datas));
-        if (from) setFrom(froms);
+
+        let fromWhom = localStorage.getItem("from");
+        if (fromWhom) setFrom(fromWhom);
     }, []);
     return (
         <>

@@ -11,7 +11,9 @@ import Divider from '../Components/Divider';
 const Welcome = () => {
     const [searchParams] = useSearchParams();
     const code = searchParams.get('code');
+    console.log("🚀 ~ Welcome ~ code:", code)
     const from = searchParams.get('from');
+    console.log("🚀 ~ Welcome ~ from:", from)
 
     const { togglePlay, isPlaying } = useContext(AudioContext);
     const [isPopupOpen, setIsPopupOpen] = useState(false);
