@@ -10,18 +10,26 @@ import Divider from '../Components/Divider';
 
 const Welcome = () => {
     const [searchParams] = useSearchParams();
-    const code = searchParams.get('code');
-    console.log("🚀 ~ Welcome ~ code:", code)
-    const from = searchParams.get('from');
-    console.log("🚀 ~ Welcome ~ from:", from)
+    // const code = searchParams.get('code');
+    const from = searchParams.get('f');
+    const withs = searchParams.get('w');
+    const address = searchParams.get('a');
+    const name = searchParams.get('n');
 
     const { togglePlay, isPlaying } = useContext(AudioContext);
     const [isPopupOpen, setIsPopupOpen] = useState(false);
 
     useEffect(() => {
-        let data = middlewareService.middleware({ code: code });
-        if (data.is_authenticated) localStorage.setItem("data", JSON.stringify(data.data));
-        if (from) localStorage.setItem("from", from);
+        // let data = middlewareService.middleware({ code: code });
+        // if (data.is_authenticated) localStorage.setItem("data", JSON.stringify(data.data));
+        let newObject = {
+            code: "0000",
+            address: address,
+            name: name,
+            with: withs == "1" ? "With Family" : "Self"
+        };
+        localStorage.setItem("data", JSON.stringify(newObject));
+        if (from) localStorage.setItem("from", from == "0" ? "rina" : "sourav");
         if (!isPlaying) setIsPopupOpen(true);
     }, []);
 
