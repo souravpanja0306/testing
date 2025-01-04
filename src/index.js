@@ -1,6 +1,6 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import { createHashRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import './index.css';
 
 // Import AudioProvider
@@ -16,7 +16,7 @@ import Invitation from './Pages/Invitation';
 import Groom from './Pages/Groom';
 import Bride from './Pages/Bride';
 
-const router = createHashRouter(
+const router = createBrowserRouter(
   [
     { path: "/", element: <Welcome /> },
     { path: "/*", element: <Error /> },
