@@ -9,10 +9,13 @@ import Divider from '../Components/Divider';
 const Invitation = () => {
     const navigate = useNavigate();
     const [data, setdata] = useState({});
+    const [from, setFrom] = useState("");
 
     useEffect(() => {
         let datas = localStorage.getItem("data");
-        if (data) setdata(JSON.parse(datas))
+        let froms = localStorage.getItem("from");
+        if (data) setdata(JSON.parse(datas));
+        if (from) setFrom(froms);
     }, []);
     return (
         <>
@@ -40,7 +43,11 @@ const Invitation = () => {
                     <PiHandsPrayingLight className='text-yellow-500 text-7xl font-thin p-2' />
                     <div className='flex flex-col py-2 text-center'>
                         <p className='text-yellow-500 font-dancing text-xl font-medium animate-text-from-left'>With best compliments from:</p>
-                        <p className='text-yellow-500 font-playwrite text-xl font-medium animate-text-from-right'>Bimal Panja & Jaya Panja</p>
+                        <p className='text-yellow-500 font-playwrite text-xl font-medium animate-text-from-right'>
+                            {
+                                from == "rina" ? "Sukumar Hader & Arati Halder" : "Bimal Panja & Jaya Panja"
+                            }
+                        </p>
                     </div>
                     <div className='flex flex-col py-2 text-center'>
                         <Divider />
