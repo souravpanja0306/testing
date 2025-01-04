@@ -28,12 +28,12 @@ const Share = () => {
         <Layout>
             <div className="flex justify-center items-center min-h-screen w-full">
                 <div className="grid gap-2">
-                    <select className="p-2 rounded-lg bg-[#141d31] text-white font-playwrite" onChange={(e) => setFrom(e.target.value)}>
+                    <select className="text-center p-2 rounded-lg bg-[#141d31] text-white font-playwrite" onChange={(e) => setFrom(e.target.value)}>
                         <option disabled selected>Select Name</option>
                         <option value={"rina"}>Rina Halder</option>
                         <option value={"sourav"}>Sourav Panja</option>
                     </select>
-                    <input className="p-2 w-full rounded-lg bg-[#141d31] text-white font-playwrite" type="number" placeholder="Enter Code" onChange={(e) => setCode(e.target.value)} />
+                    <input className="text-center p-2 w-full rounded-lg bg-[#141d31] text-white font-playwrite" type="number" placeholder="Enter Code" onChange={(e) => setCode(e.target.value)} />
                     <button onClick={shareInvitation} className="bg-[#141d31] text-white font-bold p-2 font-playwrite flex justify-center items-center gap-2 rounded-lg">
                         <BiShare className="text-2xl" />Share
                     </button>

@@ -11,7 +11,7 @@ import Divider from '../Components/Divider';
 const Welcome = () => {
     const [searchParams] = useSearchParams();
     const code = searchParams.get('code');
-    const from = searchParams.get('code');
+    const from = searchParams.get('from');
 
     const { togglePlay, isPlaying } = useContext(AudioContext);
     const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -25,13 +25,13 @@ const Welcome = () => {
 
     return (
         <Layout>
-            <Link to="/address" className="fixed bottom-[40%] left-0" onClick={() => navigator.vibrate(75)}>
+            <Link to="/address" className="fixed bottom-[350px] left-0" onClick={() => navigator.vibrate(75)}>
                 <div className="font-playwrite p-2 mb-1 text-white shadow-md shadow-slate-500 rounded-r-full bg-black cursor-pointer select-none flex justify-center items-center gap-1 animate-blink">
                     <IoLocationOutline />
                     <p className="text-xs">Venue</p>
                 </div>
             </Link>
-            <Link to="/home" className="fixed bottom-[40%] right-0" onClick={() => navigator.vibrate(75)}>
+            <Link to="/home" className="fixed bottom-[350px] right-0" onClick={() => navigator.vibrate(75)}>
                 <div className="font-playwrite p-2 mb-1 text-white shadow-md shadow-slate-500 rounded-l-full bg-black cursor-pointer select-none flex justify-center items-center gap-1 animate-blink">
                     <p className="text-xs">Greetings</p>
                     <IoArrowForwardOutline />
