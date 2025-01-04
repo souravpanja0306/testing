@@ -61,22 +61,41 @@ const Invitation = () => {
                         <p className='text-yellow-500 font-dancing text-3xl font-medium animate-text-from-right'>
                             {from == "rina" ? "Amit Halder & Sona Halder" : "Subham Panja & Dipika Panja"}
                         </p>
-                        <p className='text-white font-dancing text-3xl font-medium animate-text-from-right'>
-                            Contact Us
+                        <br />
+                        <Divider />
+                        <p className='text-white font-dancing text-xl font-medium animate-text-from-right'>
+                            Click to Call
                         </p>
                         <p className='text-yellow-500 font-playwrite text-xl font-medium animate-text-from-left'>
                             {from == "rina"
-                                ? <>
-                                    <a href="tel:+917439071514">7439071514 (Sukumar Halder)</a>
-                                    <br />
-                                    <a href="tel:+918013951866">8013951866 (Manaranjan)</a>
-                                    <br />
-                                    <a href="tel:+919007773636">9007773636 (Amit)</a>
-                                </>
+                                ? <div className=''>
+                                    <a href="tel:+917439071514"
+                                        className='flex justify-center items-center gap-2 m-0 p-0'>
+                                        <IoCallOutline />
+                                        Sukumar Halder
+                                    </a>
+                                    <a href="tel:+918013951866"
+                                        className='flex justify-center items-center gap-2 m-0 p-0'>
+                                        <IoCallOutline />
+                                        Manaranjan Halder
+                                    </a>
+                                    <a href="tel:+919007773636"
+                                        className='flex justify-center items-center gap-2 m-0 p-0'>
+                                        <IoCallOutline />
+                                        Amit Halder
+                                    </a>
+                                </div>
                                 : <>
-                                    <a href="tel:+917278288786">7278288786 (Bimal Panja)</a>
-                                    <br />
-                                    <a href="tel:+919883250237">9883250237 (Subham Panja)</a>
+                                    <a href="tel:+917278288786"
+                                        className='flex justify-center items-center gap-2 m-0 p-0'>
+                                        <IoCallOutline />
+                                        Bimal Panja
+                                    </a>
+                                    <a href="tel:+919883250237"
+                                        className='flex justify-center items-center gap-2 m-0 p-0'>
+                                        <IoCallOutline />
+                                        Subham Panja
+                                    </a>
                                 </>
                             }
                         </p>

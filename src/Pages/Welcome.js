@@ -22,8 +22,8 @@ const Welcome = () => {
     useEffect(() => {
         // let data = middlewareService.middleware({ code: code });
         // if (data.is_authenticated) localStorage.setItem("data", JSON.stringify(data.data));
-        let isDataExist = localStorage.getItem("data");
-        if (!isDataExist) {
+        if (from && withs && address && name) {
+            console.log(from, withs, address, name)
             let newObject = {
                 code: "0000",
                 address: address ? address : "",
@@ -33,7 +33,21 @@ const Welcome = () => {
             if (withs && withs == "0") newObject["with"] = "Self";
             if (withs && withs == "1") newObject["with"] = "With Family";
             localStorage.setItem("data", JSON.stringify(newObject));
-            if (from) localStorage.setItem("from", from == "0" ? "rina" : "sourav");
+            localStorage.setItem("from", from == "0" ? "rina" : "sourav");
+        } else {
+            let isDataExist = localStorage.getItem("data");
+            if (!isDataExist) {
+                let newObject = {
+                    code: "0000",
+                    address: address ? address : "",
+                    name: name ? name : "",
+                    with: "",
+                };
+                if (withs && withs == "0") newObject["with"] = "Self";
+                if (withs && withs == "1") newObject["with"] = "With Family";
+                localStorage.setItem("data", JSON.stringify(newObject));
+                localStorage.setItem("from", "sourav");
+            };
         };
         if (!isPlaying) setIsPopupOpen(true);
     }, []);
