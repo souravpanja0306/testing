@@ -11,6 +11,7 @@ import Divider from '../Components/Divider';
 const Welcome = () => {
     const [searchParams] = useSearchParams();
     const code = searchParams.get('code');
+    const from = searchParams.get('code');
 
     const { togglePlay, isPlaying } = useContext(AudioContext);
     const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -18,6 +19,7 @@ const Welcome = () => {
     useEffect(() => {
         let data = middlewareService.middleware({ code: code });
         if (data.is_authenticated) localStorage.setItem("data", JSON.stringify(data.data));
+        if (from) localStorage.setItem("from", from);
         if (!isPlaying) setIsPopupOpen(true);
     }, []);
 
