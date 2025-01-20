@@ -15,6 +15,20 @@ export const AudioProvider = ({ children }) => {
         };
     }, [isPlaying]);
 
+    useEffect(() => {
+        const handleVisibilityChange = () => {
+            if (document.hidden) {
+                audioRef.current.pause();
+            } else if (isPlaying) {
+                audioRef.current.play();
+            };
+        };
+        document.addEventListener('visibilitychange', handleVisibilityChange);
+        return () => {
+            document.removeEventListener('visibilitychange', handleVisibilityChange);
+        };
+    }, [isPlaying]);
+
     const togglePlay = () => {
         setIsPlaying((prev) => !prev);
         if (isPlaying) {
