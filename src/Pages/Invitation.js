@@ -45,7 +45,7 @@ const Invitation = () => {
                     <div className='flex flex-col py-2 text-center'>
                         <p className='text-yellow-500 font-dancing text-xl font-medium animate-text-from-left'>With best compliments from:</p>
                         <p className='text-yellow-500 font-playwrite text-xl font-medium animate-text-from-right'>
-                            {from == "rina" ? "Sukumar Hader & Arati Halder" : "Bimal Panja & Jaya Panja"}
+                            {from == "rina" ? "Sukumar Halder & Arati Halder" : "Bimal Panja & Jaya Panja"}
                         </p>
                     </div>
                     <div className='flex flex-col py-2 text-center'>
@@ -69,30 +69,30 @@ const Invitation = () => {
                         <p className='text-yellow-500 font-playwrite text-xl font-medium animate-text-from-left'>
                             {from == "rina"
                                 ? <div className=''>
-                                    <a href="tel:+917439071514"
-                                        className='flex justify-center items-center gap-2 m-0 p-0'>
-                                        <IoCallOutline />
-                                        +917439071514
-                                    </a>
                                     <a href="tel:+918013951866"
-                                        className='flex justify-center items-center gap-2 m-0 p-0'>
+                                        className='flex justify-center items-center gap-2 m-2 p-0'>
                                         <IoCallOutline />
                                         +918013951866
                                     </a>
                                     <a href="tel:+919007773636"
-                                        className='flex justify-center items-center gap-2 m-0 p-0'>
+                                        className='flex justify-center items-center gap-2 m-2 p-0'>
                                         <IoCallOutline />
                                         +919007773636
+                                    </a>
+                                    <a href="tel:+918240600845"
+                                        className='flex justify-center items-center gap-2 m-2 p-0'>
+                                        <IoCallOutline />
+                                        +918240600845
                                     </a>
                                 </div>
                                 : <>
                                     <a href="tel:+917278288786"
-                                        className='flex justify-center items-center gap-2 m-0 p-0'>
+                                        className='flex justify-center items-center gap-2 m-2 p-0'>
                                         <IoCallOutline />
                                         +917278288786
                                     </a>
                                     <a href="tel:+919883250237"
-                                        className='flex justify-center items-center gap-2 m-0 p-0'>
+                                        className='flex justify-center items-center gap-2 m-2 p-0'>
                                         <IoCallOutline />
                                         +919883250237
                                     </a>
