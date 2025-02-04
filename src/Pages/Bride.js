@@ -16,13 +16,13 @@ const Venue = () => {
     return (
         <>
             <Layout>
-                <Link to="/" className="fixed bottom-[300px] left-0" onClick={() => navigator.vibrate(75)}>
+                <Link to="/" className="fixed bottom-[25%] left-0" onClick={() => navigator.vibrate(75)}>
                     <div className="font-playwrite p-2 mb-1 text-white shadow-md shadow-slate-500 rounded-r-full bg-black cursor-pointer select-none flex justify-center items-center gap-1 animate-blink">
                         <IoHomeOutline />
                         <p className="text-xs">Home</p>
                     </div>
                 </Link>
-                <Link to="/venue" className="fixed bottom-[300px] right-0" onClick={() => navigator.vibrate(75)}>
+                <Link to="/venue" className="fixed bottom-[25%] right-0" onClick={() => navigator.vibrate(75)}>
                     <div className="font-playwrite p-2 mb-1 text-white shadow-md shadow-slate-500 rounded-l-full bg-black cursor-pointer select-none flex justify-center items-center gap-1 animate-blink">
                         <p className="text-xs">Programmes</p>
                         <IoCalendarNumberOutline />
@@ -30,7 +30,7 @@ const Venue = () => {
                 </Link>
 
                 <div className='min-h-screen justify-center items-center flex flex-col rounded-br-3xl rounded-tl-3xl'>
-                    <div className='w-full flex justify-center animate-text-from-right'>
+                    <div className='w-full flex justify-center'>
                         <img alt='Address' src={`${process.env.PUBLIC_URL}/bride.png`} className='w-[60%] text-center' />
                     </div>
                     <Divider />

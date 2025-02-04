@@ -43,7 +43,7 @@ const Share = () => {
                     </select>
                     <input className="text-center p-2 w-full rounded-lg bg-[#141d31] text-white font-playwrite"
                         type="text"
-                        placeholder="Invitation Send To"
+                        placeholder="Invitation Send To (Name)..."
                         onChange={(e) => setName(e.target.value)}
                     />
                     <input

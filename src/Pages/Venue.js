@@ -35,13 +35,13 @@ const Venue = () => {
             {/* <button onClick={() => localStorage.clear()} >Clear</button>
                 <OptionBar isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} /> */}
             <Layout>
-                <Link to="/home" className="fixed bottom-[300px] left-0" onClick={() => navigator.vibrate(75)}>
+                <Link to="/home" className="fixed bottom-[25%] left-0" onClick={() => navigator.vibrate(75)}>
                     <div className="font-playwrite p-2 mb-1 text-white shadow-md shadow-slate-500 rounded-r-full bg-black cursor-pointer select-none flex justify-center items-center gap-1 animate-blink">
                         <IoArrowBackOutline />
                         <p className="text-xs">Greetings</p>
                     </div>
                 </Link>
-                <Link to="/invitation" className="fixed bottom-[300px] right-0" onClick={() => navigator.vibrate(75)}>
+                <Link to="/invitation" className="fixed bottom-[25%] right-0" onClick={() => navigator.vibrate(75)}>
                     <div className="font-playwrite p-2 mb-1 text-white shadow-md shadow-slate-500 rounded-l-full bg-black cursor-pointer select-none flex justify-center items-center gap-1 animate-blink">
                         <p className="text-xs">Invitation</p>
                         <IoPeopleOutline />
@@ -50,7 +50,7 @@ const Venue = () => {
 
                 <div className='min-h-screen justify-center items-center flex flex-col rounded-br-3xl rounded-tl-3xl'>
                     <Divider />
-                    <p className='text-yellow-500 font-dancing text-4xl font-medium'>~ Programs ~</p>
+                    <p className='text-yellow-500 font-dancing text-4xl font-medium'>~ Programmes ~</p>
                     <Divider />
                     <h className="flex text-yellow-500 justify-center text-xl items-center gap-2 font-dancing animate-text-from-left">Save the Dates</h>
 

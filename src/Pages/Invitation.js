@@ -21,13 +21,13 @@ const Invitation = () => {
     return (
         <>
             <Layout>
-                <Link to="/venue" className="fixed bottom-[300px] left-0" onClick={() => navigator.vibrate(75)}>
+                <Link to="/venue" className="fixed bottom-[25%] left-0" onClick={() => navigator.vibrate(75)}>
                     <div className="font-playwrite p-2 mb-1 text-white shadow-md shadow-slate-500 rounded-r-full bg-black cursor-pointer select-none flex justify-center items-center gap-1 animate-blink">
                         <IoCalendarNumberOutline />
                         <p className="text-xs">Programmes</p>
                     </div>
                 </Link>
-                <Link to="/address" className="fixed bottom-[300px] right-0" onClick={() => navigator.vibrate(75)}>
+                <Link to="/address" className="fixed bottom-[25%] right-0" onClick={() => navigator.vibrate(75)}>
                     <div className="font-playwrite p-2 mb-1 text-white shadow-md shadow-slate-500 rounded-l-full bg-black cursor-pointer select-none flex justify-center items-center gap-1 animate-blink">
                         <p className="text-xs">Venue</p>
                         <IoLocationOutline />
@@ -50,19 +50,19 @@ const Invitation = () => {
                     </div>
                     <div className='flex flex-col py-2 text-center'>
                         <Divider />
-                        <p className='text-yellow-500 font-dancing text-4xl font-medium'>~ R.S.V.P. ~</p>
+                        <p className='text-yellow-500 font-dancing text-4xl font-medium'>~ RSVP ~</p>
                         <Divider />
                         <p className='text-yellow-500 font-dancing text-3xl font-medium animate-text-from-right'>
-                            {from == "rina" ? "Manaranjan Halder" : "Subhradip Panja"}
+                            {from == "rina" ? "Manaranjan Halder" : "Subham Panja"}
                         </p>
-                        <p className='text-yellow-500 font-dancing text-3xl font-medium animate-text-from-left'>
+                        {/* <p className='text-yellow-500 font-dancing text-3xl font-medium animate-text-from-left'>
                             {from == "rina" ? "Manaranjan Halder" : "Sweety Panja"}
                         </p>
                         <p className='text-yellow-500 font-dancing text-3xl font-medium animate-text-from-right'>
                             {from == "rina" ? "Amit Halder & Sona Halder" : "Subham Panja & Dipika Panja"}
-                        </p>
+                        </p> */}
                         <br />
-                        <Divider />
+                        {/* <Divider /> */}
                         <p className='text-white font-dancing text-xl font-medium animate-text-from-right'>
                             Click to Call
                         </p>
@@ -72,29 +72,29 @@ const Invitation = () => {
                                     <a href="tel:+917439071514"
                                         className='flex justify-center items-center gap-2 m-0 p-0'>
                                         <IoCallOutline />
-                                        Sukumar Halder
+                                        +917439071514
                                     </a>
                                     <a href="tel:+918013951866"
                                         className='flex justify-center items-center gap-2 m-0 p-0'>
                                         <IoCallOutline />
-                                        Manaranjan Halder
+                                        +918013951866
                                     </a>
                                     <a href="tel:+919007773636"
                                         className='flex justify-center items-center gap-2 m-0 p-0'>
                                         <IoCallOutline />
-                                        Amit Halder
+                                        +919007773636
                                     </a>
                                 </div>
                                 : <>
                                     <a href="tel:+917278288786"
                                         className='flex justify-center items-center gap-2 m-0 p-0'>
                                         <IoCallOutline />
-                                        Bimal Panja
+                                        +917278288786
                                     </a>
                                     <a href="tel:+919883250237"
                                         className='flex justify-center items-center gap-2 m-0 p-0'>
                                         <IoCallOutline />
-                                        Subham Panja
+                                        +919883250237
                                     </a>
                                 </>
                             }
