@@ -3,21 +3,21 @@ import Layout from "../Components/Layout";
 import { BiShare } from "react-icons/bi";
 
 const Share = () => {
-    const [code, setCode] = useState("");
     const [from, setFrom] = useState("");
     const [family, setFamily] = useState("");
     const [address, setAddress] = useState("");
     const [name, setName] = useState("");
 
     const shareInvitation = () => {
-        // if (!from) return alert("Please Select `From`");
-        // if (!code) return alert("Please Enter Code");
 
         const shareData = {
             title: "Wedding Invitation",
-            text: "🎉🎊🎉 You're Invited! Join us in celebrating the wedding of Sourav Panja & Rina Halder. Click the link for details and share the joy! 🎉🎊🎉",
             url: `https://souravpanja0306.github.io/testing/#/?f=${from}&a=${encodeURIComponent(address)}&n=${encodeURIComponent(name)}&w=${family}`,
         };
+
+        if (from == "0") shareData["text"] = "🎉🎊🎉 You're Invited! Join us in celebrating the wedding of Rina Halder & Sourav Panja. Click the link for details and share the joy! 🎉🎊🎉"
+
+        if (from == "1") shareData["text"] = "🎉🎊🎉 You're Invited! Join us in celebrating the wedding of Sourav Panja & Rina Halder. Click the link for details and share the joy! 🎉🎊🎉"
 
         if (navigator.share) {
             navigator.share(shareData).then(() => {
